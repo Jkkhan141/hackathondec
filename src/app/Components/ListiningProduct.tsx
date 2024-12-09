@@ -155,7 +155,7 @@ const ProductListing = () => {
               const Icon = feature.icon;
               return (
                 <div key={idx} className="flex flex-col md:w-1/4 p-4 rounded-lg">
-                  <Icon size={30} className="text-[#2A254B]" />
+                  <Icon size={24} className="text-[#2A254B]" />
                   <p className="py-4 font-semibold">{feature.title}</p>
                   <p>{feature.description}</p>
                 </div>

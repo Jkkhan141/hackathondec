@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function BrandInfo() {
   return (
@@ -7,7 +8,7 @@ export default function BrandInfo() {
         <h2 className="text-3xl font-normal mb-2 mt-10">
           From a studio in London to a global brand with over 400 outlets
         </h2>
-        <p className="mb-4 mt-10 font-sans text-[clash] text-lg text-1.5xl ">
+        <p className="mb-4 mt-10 font-sans text-lg text-[clash] text-1.5xl ">
           When we started Avalon, the idea was simple. Make high quality furniture
           affordable and available for the mass market.
         </p>
@@ -22,11 +23,12 @@ export default function BrandInfo() {
           </button>   
         </div>
       </div>
-      <div className="md:w-1/2 order-1 md:order-2 flex items-center justify-center w-full h-full">
-        <img
+      <div className="md:w-1/2 order-1 md:order-2 flex items-center justify-center w-full h-full relative">
+        <Image
           src="/8.jpg" // Replace with your image path
           alt="Furniture display"
-          className="w-full h-full object-cover"
+          layout="fill" // This ensures the image covers the full dimensions of its container
+          objectFit="cover" // Ensures the image fits properly within its container
         />
       </div>
     </div>

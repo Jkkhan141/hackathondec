@@ -1,5 +1,5 @@
-
 import React from "react";
+import Image from "next/image"; // Import Image from next/image
 
 const About = () => {
   return (
@@ -18,59 +18,62 @@ const About = () => {
 
       {/* Story Section */}
       <div className="w-[1440px] h-[603px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
-  {/* Text Section */}
-  <div className="flex flex-col p-10 bg-[#2A254B] w-full md:w-[596px] h-full order-2 md:order-1">
-    <h2 className="text-3xl font-normal mb-6 text-white">
-    It started with a small idea
-    </h2>
-    <p className="text-white text-lg mb-6">
-    A global brand with local beginnings, our story begain in a small studio in South London in early 2014
-    </p>
-  
-    <div className="-mt-auto">
-      <button className="mt-72 bg-gray-500 rounded-md px-6 py-2 text-white">
-        View Collection
-      </button>
-    </div>
-  </div>
+        {/* Text Section */}
+        <div className="flex flex-col p-10 bg-[#2A254B] w-full md:w-[596px] h-full order-2 md:order-1">
+          <h2 className="text-3xl font-normal mb-6 text-white">It started with a small idea</h2>
+          <p className="text-white text-lg mb-6">
+            A global brand with local beginnings, our story began in a small studio in South London in early 2014
+          </p>
+          <div className="-mt-auto">
+            <button className="mt-72 bg-gray-500 rounded-md px-6 py-2 text-white">
+              View Collection
+            </button>
+          </div>
+        </div>
 
-  {/* Image Section */}
-  <div className="ml-10 flex w-full md:w-[596px] h-full order-1 md:order-2">
-    <img
-      src="/10.jpg" // Replace with your image path
-      alt="Furniture display"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
-<div className="mt-16 w-[1440px] h-[603px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
-  {/* Image Section */}
-  <div className="flex w-full md:w-1/2 h-full order-1 md:order-1">
-    <img
-      src="/11.jpg" // Replace with your image path
-      alt="Furniture display"
-      className="w-full h-full object-cover"
-    />
-  </div>
+        {/* Image Section */}
+        <div className="ml-10 flex w-full md:w-[596px] h-full order-1 md:order-2">
+          <Image
+            src="/10.jpg" // Replace with your image path
+            alt="Furniture display"
+            width={596}
+            height={603}
+            className="object-cover"
+          />
+        </div>
+      </div>
 
-  {/* Text Section */}
-  <div className="flex flex-col p-10 bg-gray-100 w-full md:w-1/2 h-full order-2 md:order-2">
-    <h2 className="text-5xl font-normal mb-6">
-      Our service isn’t just personal, it’s actually hyper personally exquisite
-    </h2>
-    <p className="text-2xl font-sans mt-4 mb-6">
-      When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.
-    </p>
-    <p className="text-2xl font-sans mt-4 mb-6">
-      Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique became the hotbed for the London interior design community.
-    </p>
-    <div className="mt-auto">
-      <button className="bg-gray-500 rounded-md px-6 py-2 text-white">
-        View Collection
-      </button>
-    </div>
-  </div>
-</div>
+      <div className="mt-16 w-[1440px] h-[603px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className="flex w-full md:w-1/2 h-full order-1 md:order-1">
+          <Image
+            src="/11.jpg" // Replace with your image path
+            alt="Furniture display"
+            width={720}
+            height={603}
+            className="object-cover"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="flex flex-col p-10 bg-gray-100 w-full md:w-1/2 h-full order-2 md:order-2">
+          <h2 className="text-5xl font-normal mb-6">
+            Our service isn’t just personal, it’s actually hyper personally exquisite
+          </h2>
+          <p className="text-2xl font-sans mt-4 mb-6">
+            When we started Avion, the idea was simple. Make high-quality furniture affordable and available for the mass market.
+          </p>
+          <p className="text-2xl font-sans mt-4 mb-6">
+            Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique became the hotbed for the London interior design community.
+          </p>
+          <div className="mt-auto">
+            <button className="bg-gray-500 rounded-md px-6 py-2 text-white">
+              View Collection
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Features Section */}
       <div className="w-full h-auto pb-16">
         <h1 className="text-center text-custom-purple text-3xl mt-10">What makes our brand different</h1>
@@ -101,9 +104,11 @@ const About = () => {
               key={index}
               className="bg-gray-200 w-72 h-auto rounded-sm px-6 py-8 text-center"
             >
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
+                width={80}
+                height={80}
                 className="mx-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               />
               <h1 className="text-custom-purple text-lg mt-4">{item.title}</h1>
